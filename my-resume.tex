@@ -1,0 +1,138 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%% Copyright (c) 2023 Hunter Figgs
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[calibri]{my-resume}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% For hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+	pdftitle={Hunter Figgs Resume}
+	}
+
+% For line spacing
+\usepackage{setspace}
+\setstretch{1.05}
+
+% Set applicant's personal data for header
+\name{Hunter Figgs}
+\address{Address \linebreak City State Zip}
+\contacts{(XXX) XXX-XXXX \linebreak hunter.figgs@gmail.com}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+
+	% Print the content
+	\begin{cvsection}{Employment}
+		\begin{cvsubsection}{Robotics Software Engineer}{ThorDrive}{July 2022 -- Present}
+			\begin{itemize}
+				\item LiDAR Sensor Grabber
+				\begin{itemize}
+					\item Reduced computation load by 60\% after profiling software module with Valgrind Callgrind and eliminating recurring memory allocations with RAII
+					\item Improved data latency by 3 milliseconds by refactoring code to use ROS zero-copy transfer
+					\item Rewrote networking code to utilize Boost.ASIO to make code robust and maintainable
+				\end{itemize}
+				\item Flight Trajectory Prediction
+				\begin{itemize}
+					\item Developed real-time airplane trajectory prediction module to assist with autonomous vehicle navigation
+					\item Implemented motion model to reliably predict short-term airplane movements
+				\end{itemize}
+				\item Sensor Calibration
+				\begin{itemize}
+					\item Adapted open-source calibration software into robot production to save days of manual labor
+				\end{itemize}
+			\end{itemize}
+		\end{cvsubsection}
+
+		\begin{cvsubsection}{Software Engineer Intern}{ThorDrive}{May 2021 -- Dec. 2021}
+			\begin{itemize}
+				\item Vehicle Control \& Diagnostic GUI
+				\begin{itemize}
+					\item Developed Python GUI application for vehicles to improve user experience/efficiency
+					\item Integrated with ROS to send vehicle commands, report diagnostics (GPS fix, battery health, etc.), log data
+				\end{itemize}
+				\item Flight Data Grabber
+				\begin{itemize}
+					\item Created module to capture and process real-time flight data to aid vehicle perception
+				\end{itemize}
+			\end{itemize}
+		\end{cvsubsection}
+
+		\begin{cvsubsection}{DevOps/TestOps Intern}{Siemens Healthineers}{May 2020 -- Aug. 2020}
+			\begin{itemize}
+				\item Server Usage Dashboard
+				\begin{itemize}
+					\item Built web dashboard to report statistics on MS Azure build server utilization
+					\item Reports were used to make decision on \$500,000 purchase of server equipment
+				\end{itemize}
+				\item Chosen for Intern Spotlight of the Week
+			\end{itemize}
+		\end{cvsubsection}
+
+		\begin{cvsubsection}{Teaching Assistant}{Engineering Dept. Ohio State}{Aug. 2019 -- Dec. 2019}
+			\begin{itemize}
+				\item Taught advanced programming section of Honors Fundamentals of Engineering course
+				\begin{itemize}
+					\item Topics: technical writing, eng. design process, eng. ethics, C/C++, MATLAB
+				\end{itemize}
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Columbus, OH}{Ohio State University}{Aug. 2018 -- May 2022}
+			\begin{itemize}
+				\item B.S. in Computer Science \& Engineering, May 2022, GPA: 3.9
+				\begin{itemize}
+					\item Coursework: Algorithms; Operating Systems; Databases; Networking; Neural Networks; Computer Vision; Speech and Language Processing; Advanced Artificial Intelligence
+				\end{itemize}
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Technical Experience}
+		\begin{cvsubsection}{Projects}{}{}
+			\begin{itemize}
+				\item \textbf{\href[pdfnewwindow=true]{https://www.hunterfiggs.com}{hunterfiggs.com}}. Fun personal website to display projects. JavaScript, CSS, HTML
+				\item \textbf{\href[pdfnewwindow=true]{https://www.hunterfiggs.com/projects/zelda-clone/zelda-clone.html}{NES Zelda Clone}} (Autumn 2020). Collaborative school project to recreate classic video game. Implemented A* enemy search, collision detection, and ray-casting lighting system. C\#.NET, MonoGame
+				\item \textbf{HackOHI/O Hackathon} (2019). 24-hour, top-down shooter in the browser. Implemented modular, file-based level design. JavaScript, p5.js, HTML
+				\item \textbf{Robotics Competition} (Spring 2019). Collaborative school project to design robot to navigate course and complete objectives. Implemented PID control system. Placed top 16 out of 100 teams. C++, SolidWorks
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item C++; Python; C\#.NET; Java, JavaScript/HTML/CSS; PowerShell; SQL
+				\item Boost; ROS; CMake; Visual Studio; Valgrind Callgrind; Kivy; SolidWorks
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+\end{document}
