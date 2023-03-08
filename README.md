@@ -6,7 +6,7 @@ Design originally proposed by Gayle L. McDowell at http://www.careercup.com/resu
 The class is based on `article` class. The paper format is set to U.S. letterpaper by default. A template showing an example usage of the class is included.
 
 ## Screenshot
-<img src="https://github.com/hfiggs/my-resume/blob/master/my-resume.png" width="240px"/>
+<img src="https://github.com/hfiggs/my-resume/blob/main/my-resume.png" width="240px"/>
 
 ## Class Options
  - `calibri` - sets calibri as the main font. Otherwise the default font is Times New Roman.
